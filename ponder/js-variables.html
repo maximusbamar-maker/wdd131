@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        // script can be in the head or in the body, this effects when the script will run
+        
+        // let is the keyword for setting a variable
+        // let only works for the first time creating a variable, it is not used for redefining variables
+        let name = "Maximus Amar"
+
+        let age = 21
+        age = age + 1
+        age += 1
+
+        // const is the keyword for setting an unchangable variable
+        // constants often have names that are all caps to make it clear that they are a constant
+        // constants give a bit more security for things that are not supposed to change
+        const NAME_OF_THE_CHURCH = "The Church of Jesus Christ of Latter-day Saints"
+
+        // this will cause an error when executed, but java_sript will not catch the error until then
+        // NAME_OF_THE_CHURCH = "Cowboy Church"
+
+        // used to print to the console, they are great for debugging and usually not seen by the user, however, it is important to remove them from final products because the user is able to see it and that could cause problems
+        console.log(NAME_OF_THE_CHURCH)
+
+        // java_script uses triple equals because it checks value and type
+        // everything in the if statement needs to be in the curly braces
+        if(name === "Maximus Amar") {
+            let greeting = "hello"
+        }
+
+        // this will cause an error because greeting only exists in the if statement and is out of scope for this console.log
+        // scope is a feature that makes code more intentional and readable
+        // console.log(greeting)
+
+        // java script will not put anything on the page on its own, it needs HTML
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
