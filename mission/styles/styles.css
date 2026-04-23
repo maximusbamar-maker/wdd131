@@ -1,0 +1,36 @@
+#content {
+    width: 50%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 40px 100px;
+
+    border: 1px solid gray;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.2em;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 1em;
+    font-weight: 100;
+    color: #006EB6;
+}
+
+li {
+    margin: 16px 0;
+}
+
+#logo {
+    text-align: center;
+    margin-top: 40px;
+}
+
+img {
+    width: 20%;
+}
