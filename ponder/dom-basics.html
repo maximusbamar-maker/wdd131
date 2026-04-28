@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="page made following an in class demonstration">
+
+        <title>Dom Basics</title>
+
+        <!-- newer CSS and JavaScript features aren't always supported by every web browser -->
+
+        <style>
+            body {
+                background-color: #ddd;
+                font-size: 20px;
+            }
+            #content {
+                max-width: 60%;
+                margin: 40px auto;
+                border: 1px solid darkgrey;
+                padding: 50px;
+            }
+            p {
+                color: #035f9c;
+                font-size: 1.3em;
+            }
+            hr {
+                height: 3px;
+                background-color: #035f9c;
+                margin: 30px auto;
+                width: 80%;
+            }
+            h1, h2, p {
+                text-align: center;
+            }
+            img {
+                display: block;
+                margin: 0 auto;
+                width: 50%;
+            }
+            #topics {
+                width: 55%;
+                margin: 0 auto;
+                line-height: 1.5em;
+            }
+            .list {
+                list-style-type: none;
+            }
+            .new-list {
+                list-style-type: disc;
+                color: purple;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="content">
+            <h1>HTML, CSS, and JS</h1>
+            
+            <p>The foundational technologies that power websites and web applications</p>
+            <hr>
+            <img src="https://wddbyui.github.io/wdd131/images/trifecta.png" alt="JS, CSS, and HTML logos">
+            <div id="topics">
+                <h2>HyperText Markup Language</h2>
+                <ul class="list">
+                    <li>Defines the structure and content of a web page.</li>
+                    <li>Without HTML there's nothing for the browser to display.</li>
+                </ul>
+                <h2>Cascading Style Sheets</h2>
+                <ul class="list">
+                    <li>Controls how the HTML elements look.</li>
+                    <li>Without CSS pages look plain and unstyled.</li>
+                </ul>
+                <h2>JavaScript</h2>
+                <ul class="list">
+                    <li>Adds interactivity and dynamic behavior.</li>
+                    <li>Without JavaScript nothing on the page responds dynamically to user actions.</li>
+                </ul>
+            </div>
+        </div>
+
+
+        <!-- by storing a script at the bottom of the body, it should load last -->
+        <!-- the best way to do this is to have the js in an external file that is defered -->
+        <script>
+            // anytime we want to change DOM, use document
+            // document is an object created by the web browser that can be manipulated
+            // document stores everything in the web page, so a specific part of the page needs to be targeted
+            console.log(document); // puts the document (the whole page) in the console
+
+            //.querySelector selects an element in the same way that CSS does, but only targets one element
+            let firstList = document.querySelector(".list"); // returns the first list on the page, this needs to be stored
+            // .style effects the CSS of the tag it is targeting
+            // JavaScript has a different way on naming the elements than CSS, usually using cammelCase instead of dashes (-)
+            // the part in "" is whatever works with CSS normaly
+            firstList.style.backgroundColor = "#FF0000";
+
+            // .getElementById can only find IDs and only needs the name, rather than the # before the name
+            let content = document.getElementById("content");
+            content.style.color = "#0000FF";
+
+            // JavaScript can be written like this to work as if it were one line
+            document.querySelector("img")
+                    .setAttribute("src", "portrait.png");
+            document.querySelector("img")
+                    .setAttribute("alt", "new alt tag");
+            
+            document.querySelector("h1")
+                    .textContent = "NEW TEXT CONTENT";
+
+            // this can be used to return a specific part of a tag
+            let headingText = document.querySelector("h1")
+                    .textContent;
+            console.log(headingText);
+
+            // changing a class is an effective way to edit the CSS of something
+            firstList.className = "new-list";
+
+            // selects ALL ul's, [1] takes the second ul to be manipulated
+            document.querySelectorAll("ul")[1]
+                    .style.backgroundColor = "pink"
+        </script>
+
+        <!-- well made HTML makes CSS and JavaScript much easier -->
+    </body>
+</html>
