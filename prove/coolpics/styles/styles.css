@@ -18,8 +18,24 @@ h1, h2 {
     margin-bottom: 10px;
 }
 
+#menu {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
 nav {
     display: none;
+}
+
+.dropdown {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 5px;
+}
+
+a {
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 header, footer {
@@ -45,9 +61,38 @@ img {
     box-shadow: 4px 4px 5px black;
 
     width: 100%;
-    height: 100%;
+    aspect-ratio: 1/1;
     object-fit: cover;
 }
+
+/* formating for the popup */
+dialog {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.75);
+}
+
+dialog img {
+    max-height: 90%;
+    max-width: 80%;
+    display: block;
+    margin: 5vh auto;
+
+    /* undo what happens to the other images */
+    border: none;
+    box-shadow: none;
+    object-fit: scale-down;
+}
+
+.close-viewer {
+    position: absolute;
+    top: 10vh;
+    right: 2vh;
+    padding: 3px 6px;
+    font-size: 1.5em;
+}
+
+/* media queries */
 
 @media screen and (min-width: 500px) and (max-width: 999px) {
     #images{
@@ -60,14 +105,16 @@ img {
         grid-template-columns: 1fr 1fr 1fr;
     }
 
+
     nav {
         display: inline;
         width: 100%;
     }
 
-    a {
-        margin-left: 10px;
-        margin-right: 10px;
+    .dropdown {
+        /* undo everything done by the dropdown class */
+        display: inline;
+        width: 100%;
     }
 
     #menu {
