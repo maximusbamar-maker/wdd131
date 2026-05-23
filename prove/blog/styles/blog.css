@@ -1,0 +1,86 @@
+body {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.text {
+    max-width: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+h1, h2 {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+hr {
+    border: none;
+    width: 90%;
+    height: 2px;
+    background-color: gold;
+    
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    justify-self: flex-end;
+
+    width: 300px;
+
+    color: darkred;
+}
+
+.buffer {
+    margin-top: 40px;
+}
+
+ul {
+    list-style-type: none;
+    text-align: right;
+}
+
+h2 {
+    color: darkred;
+    text-align: left;
+}
+
+p {
+    text-align: left;
+}
+
+@media screen and (min-width: 700px) {
+    main {
+        width: 700px;
+        justify-self: center;
+
+        display: grid;
+        grid-template-columns: 1fr 40px 4fr;
+        gap: 10px
+    }
+
+    main .text {
+        margin: 0;
+    }
+
+    .information {
+        grid-column: 1;
+    }
+
+    .buffer {
+        margin: 0;
+        margin-left: 20px;
+
+        grid-column: 2;
+        transform-origin: left;
+        transform: rotate(90deg);
+
+        width: 450px;
+    }
+
+    .book {
+        grid-column: 3;
+    }
+}
