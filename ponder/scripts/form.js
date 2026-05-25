@@ -9,7 +9,12 @@ function updateNotesField() {
     const value = travelRange.value;
 
     // Show the travel notes on the form if they are choosing many campuses and require it
-    
+    if (value === "many") {
+        notesContainer.toggleAttribute("hidden");
+
+    } else if (!notesContainer.hasAttribute("hidden")) {
+        notesContainer.toggleAttribute("hidden");
+    }
 }
 
 travelRange.addEventListener("change", updateNotesField);
@@ -79,17 +84,4 @@ form.addEventListener("submit", function (event) {
 
     form.reset();
     updateNotesField();
-});
-
-
-travelRange.addEventListener('change', function (event) {
-    console.log(event);
-    const type = form.travelRange.value;
-
-    if (type === "many") {
-        notesContainer.toggleAttribute("hidden");
-
-    } else if (!notesContainer.hasAttribute("hidden")) {
-        notesContainer.toggleAttribute("hidden");
-    }
 });

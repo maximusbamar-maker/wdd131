@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="about" content="Made for a WDD131 assignment" />
+        <meta name="author" content="Maximus Amar">
+
+        <title>Event Tickets</title>
+
+        <link rel="icon" href="favicon.ico">
+        <link rel="stylesheet" href="styles/styles.css" />
+        <script src="scripts/scripts.js" defer></script>
+    </head>
+
+    <body>
+        <main class="wrapper">
+            <h1>Event Ticket</h1>
+
+            <form id="fsyForm">
+            <div class="field">
+                <label for="firstName">First Name</label>
+                <input id="firstName" name="firstName" type="text" required />
+            </div>
+
+            <div class="field">
+                <label for="lastName">Last Name</label>
+                <input id="lastName" name="lastName" type="text" required />
+            </div>
+
+            <div class="field full">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required />
+            </div>
+
+            <div class="field">
+                <label for="ticket_type">Type</label>
+                
+                <select id="ticket_type" name="ticket_type" aria-controls="notesContainer" required>
+                    <option value="">Choose one</option>
+                    <option value="student">Student</option>
+                    <option value="guest">Guest</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label for="event_date">Event Date</label>
+                <input id="event_date" name="event_date" type="date" required />
+            </div>
+
+            <div id="student_i_num_container" class="field full" hidden>
+                <label for="i_num">Student I#</label>
+                <input id="i_num" name="i_num" type="number" />
+            </div>
+
+            <div id="access_code_container" class="field full" hidden>
+                <label for="access_code">Access Code</label>
+                <input id="access_code" name="access_code" type="string" />
+            </div>
+
+            <button class="full" type="submit">Submit Preferences</button>
+            </form>
+
+            <section id="output" aria-live="polite"></section>
+        </main>
+    </body>
+</html>
