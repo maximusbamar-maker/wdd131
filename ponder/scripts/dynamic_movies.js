@@ -41,26 +41,26 @@ const movies = [ // this is an array of javascript objects for movies
       }
     ];
 
-    movies.forEach(movie => {
-        // Code for going through each movie and creating content for that movie
-        // Display a movie card for each movie object in the array
+movies.forEach(movie => {
+    // Code for going through each movie and creating content for that movie
+    // Display a movie card for each movie object in the array
 
-        // 1. building HTML for the cards
-        // this creates a card for the movie and fills it with the data from the movies array
-        const card = `
-            <article class="movie">
-                <h2>${movie.title}</h2>
-                <img src="${movie.imgSrc}" alt="${movie.imgAlt}">
+    // 1. building HTML for the cards
+    // this creates a card for the movie and fills it with the data from the movies array
+    const card = `
+        <article class="movie">
+            <h2>${movie.title}</h2>
+            <img src="${movie.imgSrc}" alt="${movie.imgAlt}">
 
-                <p><strong>Release Date:</strong> ${movie.date}</p>
-                <p><strong>Recommended Age:</strong> ${movie.ages}</p>
-                <p><strong>Genre:</strong> ${movie.genre}</p>
-                <p><strong>Rating:</strong> <span>${movie.stars}</span></p>
+            <p><strong>Release Date:</strong> ${movie.date}</p>
+            <p><strong>Recommended Age:</strong> ${movie.ages}</p>
+            <p><strong>Genre:</strong> ${movie.genre}</p>
+            <p><strong>Rating:</strong> <span>${movie.stars}</span></p>
 
-                <p id='desc'>${movie.description}</p>
-            </article>
-        `;
+            <p id='desc'>${movie.description}</p>
+        </article>
+    `;
 
-        //2. putting that HTML on the page
-        document.getElementById("movie-list").innerHTML += card;
-    });
+    //2. putting that HTML on the page
+    document.getElementById("movie-list").innerHTML += card;
+});

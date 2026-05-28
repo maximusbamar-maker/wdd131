@@ -26,7 +26,7 @@ const articles = [
 	},
 	{
 		id: 3,
-		title: "Belgariad Book One: Pawn of Prophecy",
+		title: 'Belgariad Book One: Pawn of Prophecy',
 		date: "Feb 12, 2022",
 		description:
 		"A fierce dispute among the Gods and the theft of a powerful Orb leaves the World divided into five kingdoms. Young Garion, with his 'Aunt Pol' and an elderly man calling himself Wolf --a father and daughter granted near-immortality by one of the Gods -- set out on a complex mission.",
@@ -38,3 +38,32 @@ const articles = [
 		stars: "⭐⭐⭐⭐⭐"
 	}
 ];
+
+articles.forEach(book => {
+	// create and display an article for each book
+
+	// 1. build the HTML article
+	article = `
+		<div class="article">
+			<hr class="buffer">
+
+			<div class="text information">
+				<ul>
+					<li>${book.date}</li>
+					<li>${book.ages}</li>
+					<li>${book.genre}</li>
+					<li>${book.stars}</li>
+				</ul>
+			</div>
+
+			<div class="text book">
+				<h2>${book.title}</h2>
+				<img class="cover" src="${book.imgSrc}" alt="${book.imgAlt}">
+				<p>${book.description}</p>
+			</div>
+		</div>
+	`
+
+	// 2. display the article on the page
+	document.getElementById("article_container").innerHTML += article;
+})

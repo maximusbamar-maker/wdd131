@@ -51,17 +51,21 @@ p {
     text-align: left;
 }
 
+.cover {
+    width: 250px;
+}
+
 @media screen and (min-width: 700px) {
-    main {
+    .article {
         width: 700px;
         justify-self: center;
 
         display: grid;
-        grid-template-columns: 1fr 40px 4fr;
+        grid-template-columns: 1fr 40px 3fr;
         gap: 10px
     }
 
-    main .text {
+    .article .text {
         margin: 0;
     }
 
@@ -75,7 +79,7 @@ p {
 
         grid-column: 2;
         transform-origin: left;
-        transform: rotate(90deg);
+        transform: rotate(90deg) translateX(25px);
 
         width: 450px;
     }
