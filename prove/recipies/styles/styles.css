@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Kaushan+Script&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    max-width: 1200px;
+    width: 90%;
+    font-family: Arial, Helvetica, sans-serif;
+
+    justify-self: center;
+}
+
+h1, h2 {
+    font-family: "Amatic SC";
+}
+
+h1 {
+    font-size: 5em;
+}
+
+h2 {
+    font-size: 2em;
+    color: dodgerblue;
+    margin: 0;
+}
+
+.head {
+    display: flex;
+    justify-content: center;
+    gap: 20px
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+}
+
+.search-icon {
+    width: 70px;
+    height: 70px;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 1fr 2px 70px;
+
+    margin: 5px;
+    padding: 5px;
+    gap: 10px;
+
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+hr {
+    margin: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    height: 2px;
+    background-color: lightgray;
+    border: none
+}
+
+.divider {
+    background-color: black;
+    width: 100%;
+    height: 80%;
+    align-self: center;
+}
+
+.search-input {
+    border: none;
+}
+
+.search-icon {
+    width: 50px;
+    height: 50px;
+}
+
+.recipe-card {
+    border: 2px solid black;
+    border-radius: 10px;
+
+    margin: 5px;
+    padding: 20px;
+    gap: 10px
+}
+
+.picture {
+    width: 100%;
+}
+
+.course {
+    width: fit-content;
+    height: fit-content;
+
+    margin-bottom: 10px;
+}
+
+.description {
+    display: none;
+}
+
+footer {
+    margin: 5px;
+    text-align: center;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.social img{
+    width: 50px;
+}
+
+@media screen and (min-width: 700px) {
+    .recipe-card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .picture {
+        grid-column: 1;
+        grid-row: 1/10;
+    }
+
+    .course, .recipe-name, .rating, .description {
+        grid-column: 2;
+    }
+
+    .description {
+        grid-row: 4/10;
+
+        display: inline;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+    }
+}
